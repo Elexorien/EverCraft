@@ -1,5 +1,6 @@
 package com.elexorien.evercraft;
 
+import com.elexorien.evercraft.configuration.ConfigurationHandler;
 import com.elexorien.evercraft.proxy.IProxy;
 import com.elexorien.evercraft.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -20,7 +21,7 @@ public class EverCraft
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
