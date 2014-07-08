@@ -1,6 +1,8 @@
 package com.elexorien.evercraft;
 
 import com.elexorien.evercraft.handler.ConfigurationHandler;
+import com.elexorien.evercraft.init.ModBlocks;
+import com.elexorien.evercraft.init.ModItems;
 import com.elexorien.evercraft.proxy.IProxy;
 import com.elexorien.evercraft.reference.Reference;
 import com.elexorien.evercraft.utility.LogHelper;
@@ -25,6 +27,9 @@ public class EverCraft
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModItems.init();
+        ModBlocks.init();
         LogHelper.info("Pre Initialization complete!");
     }
     @Mod.EventHandler
