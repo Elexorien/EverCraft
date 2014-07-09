@@ -25,21 +25,31 @@ public class EverCraft
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        // Network Handling
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        // Initialize items
         ModItems.init();
+        // Initialize blocks
         ModBlocks.init();
+
         LogHelper.info("Pre Initialization complete!");
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        // Register GUIs
+        // Register tile entities
+        // Register crafting recipes
+        // General event handling
+
         LogHelper.info("Initialization complete!");
     }
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        // Wrap things up
         LogHelper.info("Post Initialization complete!");
     }
 }
