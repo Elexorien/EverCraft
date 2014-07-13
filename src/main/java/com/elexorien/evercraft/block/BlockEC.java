@@ -1,5 +1,6 @@
 package com.elexorien.evercraft.block;
 
+import com.elexorien.evercraft.creativetab.CreativeTabEC;
 import com.elexorien.evercraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,7 @@ public class BlockEC extends Block
     public BlockEC(Material material)
     {
         super(material);
+        this.setCreativeTab(CreativeTabEC.EC_TAB);
     }
 
     public BlockEC()
